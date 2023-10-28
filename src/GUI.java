@@ -1,8 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.MouseAdapter;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -18,6 +15,17 @@ public class GUI extends JFrame {
             gridPanel.add(button);
         }
         Collections.shuffle(buttons);
+    }
+
+    public void addMouseListeners(ArrayList<JButton> buttons){
+        for (int i = 0; i < buttons.size(); i++) {
+            if (buttons.get(i).getText().equals(" ")){
+                buttons.get(i-1).addMouseListener(new AdapterMouse(jb));
+                buttons.get(i-4).addMouseListener(new AdapterMouse(jb));
+                buttons.get(i+1).addMouseListener(new AdapterMouse(jb));
+                buttons.get(i+4).addMouseListener(new AdapterMouse(jb));
+            }
+        }
     }
 
     public ArrayList<JButton> skapaLista() {

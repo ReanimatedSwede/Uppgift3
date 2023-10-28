@@ -11,7 +11,5 @@ public class AdapterMouse extends MouseListenerClass{
     @Override
     public void mouseClicked(MouseEvent e) {
 
-
-
     }
 }
