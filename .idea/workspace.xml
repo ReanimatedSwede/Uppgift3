@@ -6,13 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="ca1879e7-3d41-4aff-8a73-6f144dd80fe8" name="Changes" comment="Skapat GUI klass samt deklarerat knappar och grund layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdapterMouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdapterMouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="LäggertillRevalidateMetod" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -21,6 +24,9 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 2
@@ -57,6 +63,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -71,7 +78,15 @@
       <workItem from="1698403142973" duration="372000" />
       <workItem from="1698403575359" duration="1682000" />
       <workItem from="1698405801523" duration="2176000" />
+      <workItem from="1698508544088" duration="8682000" />
     </task>
+    <task id="LOCAL−00001" summary="Skapat metoden revalidate ändrat i metoden skapaLista.">
+      <created>1698411092587</created>
+      <option name="number" value="LOCAL−00001" />
+      <option name="presentableId" value="LOCAL−00001" />
+      <updated>1698411092587</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,5 +114,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Skapat metoden revalidate ändrat i metoden skapaLista." />
+    <option name="LAST_COMMIT_MESSAGE" value="Skapat metoden revalidate ändrat i metoden skapaLista." />
   </component>
 </project>

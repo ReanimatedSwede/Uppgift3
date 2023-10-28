@@ -1,5 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -7,10 +10,11 @@ public class GUI extends JFrame {
 
     JPanel jp = new JPanel(new BorderLayout());
     JPanel gridPanel = new JPanel(new GridLayout(4, 4));
+    JButton jb = new JButton();
 
-    public void revalidate(ArrayList<JButton> buttons){
+    public void revalidate(ArrayList<JButton> buttons) {
         gridPanel.removeAll();
-        for (JButton button : buttons){
+        for (JButton button : buttons) {
             gridPanel.add(button);
         }
         Collections.shuffle(buttons);
@@ -35,10 +39,10 @@ public class GUI extends JFrame {
         jp.add(gridPanel, BorderLayout.SOUTH);
         ArrayList<JButton> buttons = skapaLista();
         revalidate(buttons);
+
         pack();
         setVisible(true);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
     }
-
 }
