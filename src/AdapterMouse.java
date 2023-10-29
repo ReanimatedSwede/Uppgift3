@@ -5,21 +5,25 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class AdapterMouse extends MouseAdapter {
-    GUI gui;
-    JButton j;
+    private GUI gui;
+    private JButton j;
 
+    private ArrayList<JButton> buttons;
 
-    public AdapterMouse(JButton j, GUI gui) {
+    public AdapterMouse(JButton j, GUI gui, ArrayList<JButton> buttons) {
         this.j = j;
         this.gui = gui;
+        this.buttons = buttons;
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
+        int index = buttons.indexOf(j);
 
-        if(j.getText().equals("Nytt spel"))
-        {
+        if(j.getText().equals("Nytt spel")) {
             this.gui.nyttSpel();
+        } else{
+            gui.swapButtonsInArray(buttons, gui.findEmptyButton(buttons), index);
         }
     }
 

@@ -36,7 +36,7 @@ public class GUI extends JFrame {
         }
     }
 
-    public void nyttSpel() {
+    public ArrayList<JButton> nyttSpel() {
         /*ArrayList<JButton> buttons = new ArrayList<>();
         skapaLista();*/
         ArrayList<JButton> buttons = skapaLista();
@@ -47,39 +47,55 @@ public class GUI extends JFrame {
         }
         gridPanel.revalidate();
         gridPanel.repaint();
+        return buttons;
     }
 
-    public JButton findEmptyButton(ArrayList<JButton> buttons) {
-        for (JButton button : buttons) {
-            if (button.getText().equals(" ")) {
-                return button;
+    public int findEmptyButton(ArrayList<JButton> buttons) {
+        for (int i = 0; i < buttons.size(); i++) {
+            if (buttons.get(i).getText().equals(" ")){
+                return i;
             }
         }
-        return null;
+        return -1;
     }
 
     public void swapButtonsInArray(ArrayList<JButton> buttons, int index1, int index2) {
         JButton temp = buttons.get(index1);
         JButton button2 = buttons.get(index2);
-        buttons.set(index1, button2);
-        buttons.set(index2, temp);
-        //revalidate(buttons);
+        String temp1 = buttons.get(index1).getText();
+        buttons.get(index1).setText(buttons.get(index2).getText());
+        buttons.get(index2).setText(temp1);
+
+        gridPanel.revalidate();
+        gridPanel.repaint();
+    }
+
+    public void addMouseListeners(ArrayList<JButton> buttons){
+        int index = findEmptyButton(buttons);
+        if(index > 0){
+            buttons.get(index+4).addMouseListener(new AdapterMouse(buttons.get(index+4), this, buttons));
+            buttons.get(index+1).addMouseListener(new AdapterMouse(buttons.get(index+1), this, buttons));
+            buttons.get(index-1).addMouseListener(new AdapterMouse(buttons.get(index-1), this, buttons));
+            if (index > 4){
+                buttons.get(index+4).addMouseListener(new AdapterMouse(buttons.get(index+4), this, buttons));
+                buttons.get(index+1).addMouseListener(new AdapterMouse(buttons.get(index+1), this, buttons));
+                buttons.get(index-1).addMouseListener(new AdapterMouse(buttons.get(index-1), this, buttons));
+                buttons.get(index-4).addMouseListener(new AdapterMouse(buttons.get(index-4), this, buttons));
+            }
+        }
     }
 
     GUI() {
         this.add(jp);
-
         jp.add(northPanel, BorderLayout.NORTH);
         jp.add(southPanel, BorderLayout.SOUTH);
         northPanel.add(nyttSpel);
         southPanel.add(gridPanel);
         ArrayList<JButton> buttons = skapaLista();
         skapaKnappar(buttons);
-        //findEmptyButton(buttons); används inte just nu
+        findEmptyButton(buttons);
 
-        nyttSpel.addMouseListener(new AdapterMouse(nyttSpel, this));
-
-
+        nyttSpel.addMouseListener(new AdapterMouse(nyttSpel, this, buttons));
         pack();
         setVisible(true);
         setLocationRelativeTo(null);
