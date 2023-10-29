@@ -7,8 +7,15 @@ import java.util.Collections;
 public class GUI extends JFrame {
 
     JPanel jp = new JPanel(new BorderLayout());
+
+    JPanel northPanel = new JPanel();
+    JPanel southPanel = new JPanel();
+
     JPanel gridPanel = new JPanel(new GridLayout(4, 4));
-    JButton jb = new JButton();
+
+
+    JButton nyttSpel = new JButton("Nytt spel");
+
 
     public ArrayList<JButton> skapaLista() {
         ArrayList<JButton> buttons = new ArrayList<>();
@@ -29,12 +36,17 @@ public class GUI extends JFrame {
         }
     }
 
-    public void nyttSpel(ArrayList<JButton> buttons) {
+    public void nyttSpel() {
+        /*ArrayList<JButton> buttons = new ArrayList<>();
+        skapaLista();*/
+        ArrayList<JButton> buttons = skapaLista();
         gridPanel.removeAll();
         Collections.shuffle(buttons);
         for (JButton button : buttons) {
             gridPanel.add(button);
         }
+        gridPanel.revalidate();
+        gridPanel.repaint();
     }
 
     public JButton findEmptyButton(ArrayList<JButton> buttons) {
@@ -56,10 +68,17 @@ public class GUI extends JFrame {
 
     GUI() {
         this.add(jp);
-        jp.add(gridPanel, BorderLayout.SOUTH);
+
+        jp.add(northPanel, BorderLayout.NORTH);
+        jp.add(southPanel, BorderLayout.SOUTH);
+        northPanel.add(nyttSpel);
+        southPanel.add(gridPanel);
         ArrayList<JButton> buttons = skapaLista();
         skapaKnappar(buttons);
-        findEmptyButton(buttons);
+        //findEmptyButton(buttons); används inte just nu
+
+        nyttSpel.addMouseListener(new AdapterMouse(nyttSpel, this));
+
 
         pack();
         setVisible(true);
