@@ -33,6 +33,7 @@ public class GUI extends JFrame {
     public void skapaKnappar(ArrayList<JButton> buttons) {
         for (JButton button : buttons) {
             gridPanel.add(button);
+            button.addMouseListener(new AdapterMouse(button, this, buttons));
         }
     }
 
@@ -59,15 +60,18 @@ public class GUI extends JFrame {
         return -1;
     }
 
-    public void swapButtonsInArray(ArrayList<JButton> buttons, int index1, int index2) {
-        JButton temp = buttons.get(index1);
-        JButton button2 = buttons.get(index2);
-        String temp1 = buttons.get(index1).getText();
-        buttons.get(index1).setText(buttons.get(index2).getText());
-        buttons.get(index2).setText(temp1);
-
+    public void printListToGridPanel(ArrayList<JButton> buttons){
+        gridPanel.removeAll();
+        for (JButton button : buttons) {
+            gridPanel.add(button);
+        }
         gridPanel.revalidate();
         gridPanel.repaint();
+    }
+
+    public void swapButtonsInArray(ArrayList<JButton> buttons, int index1, int index2) {
+        Collections.swap(buttons, index1, index2);
+        printListToGridPanel(buttons);
     }
 
     public void addMouseListeners(ArrayList<JButton> buttons){
