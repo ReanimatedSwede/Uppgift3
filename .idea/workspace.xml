@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ca1879e7-3d41-4aff-8a73-6f144dd80fe8" name="Changes" comment="Skapat GUI klass samt deklarerat knappar och grund layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdapterMouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdapterMouse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MouseListenerClass.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +16,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="LäggertillRevalidateMetod" />
+    <option name="BRANCH" value="MouseListeners" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -88,7 +90,13 @@
       <option name="presentableId" value="LOCAL−00001" />
       <updated>1698411092587</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL−00002" summary="Skapat metod för att lägga till mouselisteners">
+      <created>1698518611438</created>
+      <option name="number" value="LOCAL−00002" />
+      <option name="presentableId" value="LOCAL−00002" />
+      <updated>1698518611438</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Skapat metoden revalidate ändrat i metoden skapaLista." />
-    <option name="LAST_COMMIT_MESSAGE" value="Skapat metoden revalidate ändrat i metoden skapaLista." />
+    <MESSAGE value="Skapat metod för att lägga till mouselisteners" />
+    <option name="LAST_COMMIT_MESSAGE" value="Skapat metod för att lägga till mouselisteners" />
   </component>
 </project>
