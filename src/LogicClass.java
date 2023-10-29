@@ -3,7 +3,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class LogicClass {
-    private ArrayList<JButton> checkList = createCheckList();
+
+    private final ArrayList<JButton> checkList = createCheckList();
+
     LogicClass(){}
 
     public void win(ArrayList <JButton> buttons){
@@ -19,9 +21,7 @@ public class LogicClass {
         if (isWinner) {
             JOptionPane.showMessageDialog(null, "Grattis du vann!");
         }
-
     }
-
     public ArrayList<JButton> createCheckList(){
         ArrayList<JButton> checkList = new ArrayList<>();
         for (int i = 0; i < 16; i++) {
@@ -34,8 +34,5 @@ public class LogicClass {
             checkList.add(button);
         }
         return checkList;
-
     }
-
-
 }
