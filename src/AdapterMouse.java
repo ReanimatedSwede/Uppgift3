@@ -2,24 +2,28 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class AdapterMouse extends MouseAdapter {
     private GUI gui;
-    private JButton j;
+    private JButton button;
     private ArrayList<JButton> buttons;
-    public AdapterMouse(JButton j, GUI gui, ArrayList<JButton> buttons) {
-        this.j = j;
+
+
+
+    public AdapterMouse(JButton button, GUI gui, ArrayList<JButton> buttons) {
+        this.button = button;
         this.gui = gui;
         this.buttons = buttons;
     }
 
+
+
     @Override
     public void mouseClicked(MouseEvent e) {
-        int index = buttons.indexOf(j);
+        int index = buttons.indexOf(button);
 
-        if(j.getText().equals("Nytt spel")) {
-            this.gui.nyttSpel();
+        if(button.getText().equals("Nytt spel")) {
+            this.gui.newGame();
         } else{
             gui.swapButtonsInArray(buttons, gui.findEmptyButton(buttons), index);
         }
