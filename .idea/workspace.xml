@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca1879e7-3d41-4aff-8a73-6f144dd80fe8" name="Changes" comment="Skapat GUI klass samt deklarerat knappar och grund layout">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -15,12 +13,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Merge.Settings">
-    <option name="BRANCH" value="SkapaMetodFörBytaPlatsPåKnapapr" />
+    <option name="BRANCH" value="CodeCleanUp" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="CodeCleanUp" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "CodeCleanUp",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/najs8/OneDrive/Dokument/Nackademin/Javautveckling/Inlämningar/OOB/Sprint3/ovningar",
     "node.js.detected.package.eslint": "true",
@@ -136,6 +134,7 @@
     <MESSAGE value="Skapat metoden revalidate ändrat i metoden skapaLista." />
     <MESSAGE value="Skapat metod för att lägga till mouselisteners" />
     <MESSAGE value="Skapat swapButtons metod och findemptybutton jobbat lite med adapterMouse klassen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Skapat swapButtons metod och findemptybutton jobbat lite med adapterMouse klassen" />
+    <MESSAGE value="Rensat upp i koden och tagit bort dubbletter" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rensat upp i koden och tagit bort dubbletter" />
   </component>
 </project>
