@@ -16,13 +16,11 @@ public class AdapterMouse extends MouseAdapter {
         this.buttons = buttons;
     }
 
-
-
     @Override
     public void mouseClicked(MouseEvent e) {
         int index = buttons.indexOf(button);
 
-        if(button.getText().equals("Nytt spel")) {
+        if(button.getText().equals("New game")) {
             this.gui.newGame();
         } else{
             gui.swapButtonsInArray(buttons, gui.findEmptyButton(buttons), index);
