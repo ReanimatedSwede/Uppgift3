@@ -38,14 +38,13 @@ public class GUI extends JFrame {
     }
 
     public ArrayList<JButton> nyttSpel() {
-        /*ArrayList<JButton> buttons = new ArrayList<>();
-        skapaLista();*/
         ArrayList<JButton> buttons = skapaLista();
         gridPanel.removeAll();
         Collections.shuffle(buttons);
         for (JButton button : buttons) {
             gridPanel.add(button);
         }
+        skapaKnappar(buttons);
         gridPanel.revalidate();
         gridPanel.repaint();
         return buttons;
@@ -74,19 +73,8 @@ public class GUI extends JFrame {
         printListToGridPanel(buttons);
     }
 
-    public void addMouseListeners(ArrayList<JButton> buttons){
-        int index = findEmptyButton(buttons);
-        if(index > 0){
-            buttons.get(index+4).addMouseListener(new AdapterMouse(buttons.get(index+4), this, buttons));
-            buttons.get(index+1).addMouseListener(new AdapterMouse(buttons.get(index+1), this, buttons));
-            buttons.get(index-1).addMouseListener(new AdapterMouse(buttons.get(index-1), this, buttons));
-            if (index > 4){
-                buttons.get(index+4).addMouseListener(new AdapterMouse(buttons.get(index+4), this, buttons));
-                buttons.get(index+1).addMouseListener(new AdapterMouse(buttons.get(index+1), this, buttons));
-                buttons.get(index-1).addMouseListener(new AdapterMouse(buttons.get(index-1), this, buttons));
-                buttons.get(index-4).addMouseListener(new AdapterMouse(buttons.get(index-4), this, buttons));
-            }
-        }
+    public void addMouseListeners(){
+
     }
 
     GUI() {
@@ -97,7 +85,7 @@ public class GUI extends JFrame {
         southPanel.add(gridPanel);
         ArrayList<JButton> buttons = skapaLista();
         skapaKnappar(buttons);
-        findEmptyButton(buttons);
+
 
         nyttSpel.addMouseListener(new AdapterMouse(nyttSpel, this, buttons));
         pack();
