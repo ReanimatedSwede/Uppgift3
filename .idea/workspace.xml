@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca1879e7-3d41-4aff-8a73-6f144dd80fe8" name="Changes" comment="Skapat GUI klass samt deklarerat knappar och grund layout">
+    <list default="true" id="ca1879e7-3d41-4aff-8a73-6f144dd80fe8" name="Changes" comment="Ytterligare rensning av kod">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -101,7 +102,14 @@
       <option name="presentableId" value="LOCAL−00003" />
       <updated>1698596181373</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL−00004" summary="Ytterligare rensning av kod">
+      <option name="closed" value="true" />
+      <created>1698666081574</created>
+      <option name="number" value="LOCAL−00004" />
+      <option name="presentableId" value="LOCAL−00004" />
+      <updated>1698666081574</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -135,6 +143,7 @@
     <MESSAGE value="Skapat metod för att lägga till mouselisteners" />
     <MESSAGE value="Skapat swapButtons metod och findemptybutton jobbat lite med adapterMouse klassen" />
     <MESSAGE value="Rensat upp i koden och tagit bort dubbletter" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rensat upp i koden och tagit bort dubbletter" />
+    <MESSAGE value="Ytterligare rensning av kod" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ytterligare rensning av kod" />
   </component>
 </project>

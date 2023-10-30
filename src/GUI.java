@@ -68,13 +68,39 @@ public class GUI extends JFrame {
     }
 
     public void swapButtonsInArray(ArrayList<JButton> buttons, int index1, int index2) {
-        Collections.swap(buttons, index1, index2);
-        printListToGridPanel(buttons);
+        if (checkIfSwapIsLegal(buttons, index2)) {
+
+            Collections.swap(buttons, index1, index2);
+
+            printListToGridPanel(buttons);
+        }
     }
 
-  /*  public void addMouseListeners(){
+    public boolean checkIfSwapIsLegal(ArrayList<JButton> buttons, int index2){
+        int emptyButton = findEmptyButton(buttons);
+        int clickedButton = index2;
 
-    }*/
+        int emptyRow = emptyButton / 4;
+        int emptyCol = emptyButton % 4;
+
+        int clickedRow = clickedButton / 4;
+        int clickedCol = clickedButton % 4;
+
+        if( (emptyRow - clickedRow ) >= -1 && (emptyRow - clickedRow) <=1
+        && (emptyCol - clickedCol ) >= -1 && (emptyCol - clickedCol) <=1 )
+        {
+            if ((emptyRow - clickedRow) + (emptyCol - clickedCol) == 1 || (emptyRow - clickedRow) + (emptyCol - clickedCol) == -1){
+
+            return true;
+            }
+        }
+
+        else
+        {
+            return false;
+        }
+        return false;
+    }
 
     GUI() {
         this.add(jp);
@@ -84,6 +110,8 @@ public class GUI extends JFrame {
         southPanel.add(gridPanel);
         ArrayList<JButton> buttons = skapaLista();
         skapaKnappar(buttons);
+
+
 
 
         nyttSpel.addMouseListener(new AdapterMouse(nyttSpel, this, buttons));
