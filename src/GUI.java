@@ -6,15 +6,10 @@ import java.util.Collections;
 public class GUI extends JFrame {
 
     JPanel jp = new JPanel(new BorderLayout());
-
     JPanel northPanel = new JPanel();
     JPanel southPanel = new JPanel();
-
     JPanel gridPanel = new JPanel(new GridLayout(4, 4));
-
-
     JButton nyttSpel = new JButton("Nytt spel");
-
 
     public ArrayList<JButton> skapaLista() {
         ArrayList<JButton> buttons = new ArrayList<>();
@@ -70,6 +65,8 @@ public class GUI extends JFrame {
     public void swapButtonsInArray(ArrayList<JButton> buttons, int index1, int index2) {
         Collections.swap(buttons, index1, index2);
         printListToGridPanel(buttons);
+        LogicClass logic = new LogicClass();
+        logic.win(buttons);
     }
 
   /*  public void addMouseListeners(){

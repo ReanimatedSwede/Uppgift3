@@ -7,9 +7,7 @@ import java.util.Arrays;
 public class AdapterMouse extends MouseAdapter {
     private GUI gui;
     private JButton j;
-
     private ArrayList<JButton> buttons;
-
     public AdapterMouse(JButton j, GUI gui, ArrayList<JButton> buttons) {
         this.j = j;
         this.gui = gui;
