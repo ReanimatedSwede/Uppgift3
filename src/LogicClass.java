@@ -5,7 +5,6 @@ import java.util.Collections;
 public class LogicClass {
 
     private final ArrayList<JButton> checkList = createCheckList();
-
     LogicClass(){}
 
     public void win(ArrayList <JButton> buttons){
