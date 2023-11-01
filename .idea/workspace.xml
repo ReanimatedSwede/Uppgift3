@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ca1879e7-3d41-4aff-8a73-6f144dd80fe8" name="Changes" comment="Skapat ny klass &quot;LogicClass&quot; med metoder för att kolla om användaren har vunnit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AdapterMouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/AdapterMouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LogicClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="CheckCodeForError" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +50,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;MoveLogicCleanUpCode&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/najs8/OneDrive/Dokument/Nackademin/Javautveckling/Inlämningar/OOB/Sprint3/ovningar&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -84,6 +87,9 @@
       <workItem from="1698405801523" duration="2176000" />
       <workItem from="1698508544088" duration="8682000" />
       <workItem from="1698696553346" duration="310000" />
+      <workItem from="1698767254075" duration="1214000" />
+      <workItem from="1698787882272" duration="1976000" />
+      <workItem from="1698822941791" duration="6608000" />
     </task>
     <task id="LOCAL−00001" summary="Skapat metoden revalidate ändrat i metoden skapaLista.">
       <created>1698411092587</created>

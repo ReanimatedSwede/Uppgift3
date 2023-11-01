@@ -10,19 +10,19 @@ public class AdapterMouse extends MouseAdapter {
 
 
 
-    public AdapterMouse(JButton button, GUI gui, ArrayList<JButton> buttons) {
+    public AdapterMouse(JButton button, GUI gui, ArrayList<JButton> buttons) { //Tar in gui, knappen new game samt knapplistan.
         this.button = button;
         this.gui = gui;
         this.buttons = buttons;
     }
 
     @Override
-    public void mouseClicked(MouseEvent e) {
-        int index = buttons.indexOf(button);
+    public void mouseClicked(MouseEvent e) { //Fångar vad som händer
+        int index = buttons.indexOf(button); //Fångar klicket
 
-        if(button.getText().equals("New game")) {
+        if(button.getText().equals("New game")) { //Om denna så startas ett nytt spel och listan kastas om och ritas ut på nytt.
             this.gui.newGame();
-        } else{
+        } else{ //Annars körs metoderna för att flytta på knapparna
             gui.swapButtonsInArray(buttons, gui.findEmptyButton(buttons), index);
         }
     }
